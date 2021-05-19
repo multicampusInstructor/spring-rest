@@ -12,12 +12,19 @@
 		$.ajax(
 			{
 	         type:"get",
-	         url:"/rest/res1",
+	         url:"/rest/biz/searchId.do",
 	         contentType: "application/json",
 	         data :{"userId":$("#userId").val()},
 		     success:function (data,textStatus){
-		    	 alert(data);
-		    	 $('#message').text(data);
+		    	  alert(data);
+		    	  var obj = JSON.parse(data);
+		    	  alert(obj.result);
+		    	 if(obj.result){
+		    		 $('#message').text("사용불가");
+		    	 } else {
+		    		 $('#message').text("사용가능");
+		    	 }
+		    	
 		     },
 		     error:function(data,textStatus){
 		        alert("에러가 발생했습니다.");
