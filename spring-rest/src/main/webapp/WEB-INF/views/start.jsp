@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Start</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+	function checkID(){
+		
+	}
+</script>
 </head>
 <body>
 	<form action="" method="">
